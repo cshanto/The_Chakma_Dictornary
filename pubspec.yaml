@@ -1,0 +1,45 @@
+name: dictionary_app
+description: A cross-platform offline dictionary app with dark/light theme support
+version: 1.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Database - Fastest NoSQL database for Flutter
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # CSV Parsing
+  csv: ^6.0.0
+  
+  # File paths
+  path_provider: ^2.1.1
+  
+  # State management
+  provider: ^6.1.1
+  
+  # URL launcher for email
+  url_launcher: ^6.2.4
+  
+  # Icons
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Code generation for Hive
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.7
+  
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/

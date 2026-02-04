@@ -1,0 +1,92 @@
+[
+  {
+    "word": "Greeting",
+    "definition": "A polite word or sign of welcome or recognition.",
+    "example": "He nodded a greeting.",
+    "chakma1": "Nomoskar",
+    "chakma2": "Juju",
+    "chakma1Example": "He nodded a greeting.",
+    "chakma2Example": "He nodded a greeting.",
+    "createdAt": "2026-02-04T00:00:00.000Z"
+  },
+  {
+    "word": "Food",
+    "definition": "Any nutritious substance that people or animals eat or drink.",
+    "example": "We need food to survive.",
+    "chakma1": "Khaba",
+    "chakma2": "Hana",
+    "chakma1Example": "He nodded a greeting.",
+    "chakma2Example": "He nodded a greeting.",
+    "createdAt": "2026-02-04T00:00:01.000Z"
+  },
+  {
+    "word": "Algorithm",
+    "definition": "A step-by-step procedure for solving a problem or accomplishing a task.",
+    "example": "The sorting algorithm efficiently organized the data.",
+    "chakma1": "",
+    "chakma2": "",
+    "chakma1Example": "",
+    "chakma2Example": "",
+    "createdAt": "2026-02-04T00:00:02.000Z"
+  },
+  {
+    "word": "Internet",
+    "definition": "A global computer network providing a variety of information and communication facilities.",
+    "example": "I searched for the information on the internet.",
+    "chakma1": "Internet",
+    "chakma2": "Jal",
+    "chakma1Example": "",
+    "chakma2Example": "",
+    "createdAt": "2026-02-04T00:17:12.045116"
+  },
+  {
+    "word": "Software",
+    "definition": "The programs and other operating information used by a computer.",
+    "example": "He is a software engineer.",
+    "chakma1": "Software",
+    "chakma2": "Softowa",
+    "chakma1Example": "",
+    "chakma2Example": "",
+    "createdAt": "2026-02-04T00:17:12.045116"
+  },
+  {
+    "word": "Hardware",
+    "definition": "The physical parts of a computer system.",
+    "example": "The hardware was damaged in the flood.",
+    "chakma1": "Hardware",
+    "chakma2": "Hardowa",
+    "chakma1Example": "",
+    "chakma2Example": "",
+    "createdAt": "2026-02-04T00:17:12.045116"
+  },
+  {
+    "word": "CPU",
+    "definition": "Central Processing Unit - the primary component of a computer that acts as its \"\"control center\"\".",
+    "example": "The CPU is the brain of the computer.",
+    "chakma1": "CPU",
+    "chakma2": "CPU",
+    "chakma1Example": "",
+    "chakma2Example": "",
+    "createdAt": "2026-02-04T00:17:12.045116"
+  },
+  {
+    "word": "RAM",
+    "definition": "Random Access Memory - a type of computer memory that can be accessed randomly.",
+    "example": "I need more RAM for my computer.",
+    "chakma1": "RAM",
+    "chakma2": "RAM",
+    "chakma1Example": "",
+    "chakma2Example": "",
+    "createdAt": "2026-02-04T00:17:12.045116"
+  },
+  {
+    "word": "Apple",
+    "definition": "A fruit",
+    "example": "\"A red sweet fruit\"",
+    "chakma1": "Ranga gulo",
+    "chakma2": "Ranga mide gulo",
+    "chakma1Example": "Ranga gulo hemme",
+    "chakma2Example": "Ranga mide gulo hele sod",
+    "createdAt": "2026-02-04T00:17:12.045116"
+  }
+]
