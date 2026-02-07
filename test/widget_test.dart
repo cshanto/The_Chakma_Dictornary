@@ -7,24 +7,59 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:provider/provider.dart';
 import 'package:dictionary_app/main.dart';
+import 'package:dictionary_app/providers/theme_provider.dart';
+import 'package:dictionary_app/widgets/dictionary_card.dart';
+import 'package:dictionary_app/models/dictionary_entry.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('DictionaryCard should show English and Chakma 1 but HIDE Chakma 2', (WidgetTester tester) async {
+    final entry = DictionaryEntry(
+      word: 'TestWord',
+      definition: 'Test Definition',
+      example: 'Test Example',
+      chakma1: 'C1 Meaning',
+      chakma2: 'C2 Meaning', // This should be hidden in UI
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Wrap in ThemeProvider and MaterialApp to provide necessary context
+    await tester.pumpWidget(
+      ChangeNotifierProvider(
+        create: (_) => ThemeProvider(),
+        child: MaterialApp(
+          home: Scaffold(
+            body: DictionaryCard(entry: entry, index: 0),
+          ),
+        ),
+      ),
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Verify word title is shown
+    expect(find.text('TestWord'), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // ExpansionTile titles should be visible
+    expect(find.text('English'), findsOneWidget);
+    expect(find.text('Chakma 1'), findsOneWidget);
+
+    // Initial check: content should be offstage or not visible
+    // Depending on ExpansionTile implementation, it might be in the tree but not visible.
+    
+    // Expand English section
+    await tester.tap(find.text('English'));
+    await tester.pumpAndSettle();
+    expect(find.text('Test Definition'), findsOneWidget);
+
+    // Expand Chakma 1 section
+    await tester.tap(find.text('Chakma 1'));
+    await tester.pumpAndSettle();
+    expect(find.text('C1 Meaning'), findsOneWidget);
+    
+    // VERIFY CHAKMA 2 IS HIDDEN
+    expect(find.text('Chakma 2'), findsNothing);
+    expect(find.text('C2 Meaning'), findsNothing);
   });
 }
+
+
+

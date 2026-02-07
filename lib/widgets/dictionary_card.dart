@@ -68,6 +68,7 @@ class DictionaryCard extends StatelessWidget {
               ),
 
             // 4. Chakma 2 Section
+            /*
             if (entry.chakma2.isNotEmpty)
               _buildLanguageSection(
                 context,
@@ -78,6 +79,7 @@ class DictionaryCard extends StatelessWidget {
                   example: entry.chakma2Example ?? '',
                 ),
               ),
+            */
           ],
         ),
       ),
